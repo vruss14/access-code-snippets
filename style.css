@@ -23,7 +23,7 @@ body {
     font-size: 3rem;
 }
 
-/* Clear feedback for when a code snippet has been selected */
+/* Easy-to-see feedback for when a code snippet has been selected */
 
 ::selection {
     background-color: var(--black);
@@ -73,6 +73,7 @@ header {
     outline: 5px dotted var(--white);
     margin-left: 2rem;
     margin-right: 2rem;
+    height: 60rem;
 }
 
 .code-card .card-header {
@@ -102,6 +103,10 @@ header {
     margin-left: 3rem;
     margin-right: 3rem;
     padding: 5%;
+    height: 20rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    overflow-x: scroll;
 }
 
 .code-block:hover {
@@ -158,5 +163,9 @@ header {
     .card-column {
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
+    }
+
+    .code-block {
+        font-size: 2.5rem;
     }
 }

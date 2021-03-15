@@ -22,46 +22,42 @@
 
             <div class="card-column">
                 <figure class="code-card" id = "card-1">
-                    <h2 class="card-header" id = "head-1">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-1">VARIABLES</h2>
+                        <p class = "card-descr">Declare variables at the top of the stylesheet.
+                            After declaring them, use <code>var(--customname);</code> when styling.
+                        </p>
+                    <pre class="code-block"><code>:root {
+    --black: #000;
+    --magenta: #FF00FF;
+    --green: #00FF00;
+    --blue: #00FFFF;
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-2">
-                    <h2 class="card-header" id = "head-2">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
+                    <h2 class="card-header" id = "head-2">SET REM</h2>
+                        <p class = "card-descr">The default for HTML is 16px,
+                            which makes it difficult to calculate REM. This will
+                        set the default to 10px. </p>
                         
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <pre class="code-block"><code>html {
+    font-size: 62.5%;
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-3">
-                    <h2 class="card-header" id = "head-3">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-3">SELECTIONS</h2>
+                        <p class = "card-descr">The default background color
+                            and text color when text is selected can be modified
+                            via CSS.
+                        </p>
+                    <pre class="code-block"><code>::selection {
+    background-color: black;
+    color: white;
 }</code></pre>
                 </figure>
             </div>
@@ -70,7 +66,8 @@
                 <figure class="code-card" id = "card-4">
                     <h2 class="card-header" id = "head-4">THE BOX MODEL</h2>
                         <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
+                            For padding and margins, the shorthand order goes 
+                            top, right, bottom, then left.</p>
                     <pre class="code-block"><code>.yourclassname {
     width:
     height:
@@ -83,165 +80,71 @@
 
             <div class="card-column">
                 <figure class="code-card" id = "card-5">
-                    <h2 class="card-header" id = "head-5">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-5">MEDIA QUERIES</h2>
+                        <p class = "card-descr">Remember these breakpoints for responsiveness: 
+                            480px (mobile), 768px (tablet), 
+                            1024px (laptop), 1200px (desktop).
+                        </p>
+                    <pre class="code-block"><code>@media screen and (min-width: 480px) {
+    .yourclassname {
+        color: white;
+    }
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-6">
-                    <h2 class="card-header" id = "head-6">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-6">PSEUDOCLASSES</h2>
+                        <p class = "card-descr">Use when modifying CSS styling based on state.
+                            States you may modify include hover, active, and focus.
+                        </p>
+                    <pre class="code-block"><code>button:hover {
+    background-color: white;
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-7">
-                    <h2 class="card-header" id = "head-7">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-7">PSEUDOELEMENTS</h2>
+                        <p class = "card-descr">Useful when adding styling or content
+                            immediately before or after another element. Two colons are necessary.
+                        </p>
+                    <pre class="code-block"><code>button::after {
+    content: ✅;
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-8">
-                    <h2 class="card-header" id = "head-8">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-8">CLICKABLE DIV</h2>
+                        <p class = "card-descr">In the HTML, include an anchor tag
+                            within the div that links to the desired URL. Then, use this CSS.
+                        </p>
+                    <pre class="code-block"><code>#yourdivID a {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }</code></pre>
                 </figure>
             </div>
 
             <div class="card-column">
                 <figure class="code-card" id = "card-9">
-                    <h2 class="card-header" id = "head-9">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-10">
-                    <h2 class="card-header" id = "head-10">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-11">
-                    <h2 class="card-header" id = "head-11">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-12">
-                    <h2 class="card-header" id = "head-12">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-13">
-                    <h2 class="card-header" id = "head-13">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-14">
-                    <h2 class="card-header" id = "head-14">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
-}</code></pre>
-                </figure>
-            </div>
-
-            <div class="card-column">
-                <figure class="code-card" id = "card-15">
-                    <h2 class="card-header" id = "head-15">THE BOX MODEL</h2>
-                        <p class = "card-descr">CSS exists in a series of boxes. 
-                            For padding and margins, the order goes top, right, bottom, then left.</p>
-                    <pre class="code-block"><code>.yourclassname {
-    width:
-    height:
-    padding:
-    border:
-    margin:
+                    <h2 class="card-header" id = "head-9">DIV BACKGROUND</h2>
+                        <p class = "card-descr">This will set a full-size background image within a div that is centered
+                            and does not repeat.
+                        </p>
+                    <pre class="code-block"><code>#yourdivID {
+    background-image: url("img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }</code></pre>
                 </figure>
             </div>
