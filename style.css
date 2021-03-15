@@ -1,7 +1,6 @@
 :root {
     --black: #000;
     --red: #FF0000;
-    --pink: #FF1493;
     --yellow: #FFFF00;
     --magenta: #FF00FF;
     --green: #00FF00;
@@ -24,6 +23,15 @@ body {
     font-size: 3rem;
 }
 
+/* Clear feedback for when a code snippet has been selected */
+
+::selection {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Header styling */
+
 .top-info {
     text-align: center;
 }
@@ -32,6 +40,7 @@ header {
     border: 3px solid var(--magenta);
     margin-left: 1%;
     margin-right: 1%;
+    margin-bottom: 4rem;
 }
 #main-header {
     color: var(--blue);
@@ -61,23 +70,23 @@ header {
 .code-card {
     display: flex;
     flex-direction: column;
-    outline: 5px dotted white;
+    outline: 5px dotted var(--white);
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
 .code-card .card-header {
     position: relative;
-    background-color: var(--green);
 }
 
 .card-header {
     text-align: center;
     margin-left: 3rem;
     margin-right: 3rem;
-    border: 3px solid var(--blue);
     border-radius: 20px;
+    background-color: palegoldenrod;
     color: black;
+    margin-top: -2.75rem;
 }
 
 .card-descr {
@@ -86,14 +95,50 @@ header {
 }
 
 .code-block {
-    background-color: gray;
+    background-color: paleturquoise;
+    border: 2px solid gray;
+    border-radius: 20px;
+    color: black;
     margin-left: 3rem;
     margin-right: 3rem;
-    overflow-x: vixible;
-
+    padding: 5%;
 }
 
-/* Responsive design */
+.code-block:hover {
+    cursor: copy;
+}
+
+.code-card pre:active {
+    user-select:  all;
+}
+
+#card-1, #card-6, #card-11 {
+    outline: 5px dotted var(--red);
+}
+
+#card-2, #card-7, #card-12 {
+    outline: 5px dotted var(--blue);
+}
+
+#card-3, #card-8, #card-13 {
+    outline: 5px dotted var(--yellow);
+}
+
+#card-4, #card-9, #card-14 {
+    outline: 5px dotted var(--green);
+}
+
+#card-5, #card-10, #card-15 {
+    outline: 5px dotted var(--magenta);
+}
+
+.code-card:hover, .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 15px var(--white),
+    0px 0px 15px var(--white);
+    transition: 0.4s ease-in-out;
+}
+
+/* Mobile-First Responsive Design */
 
 @media screen and (min-width: 592px) {
     .card-column {
